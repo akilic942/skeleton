@@ -1,0 +1,12 @@
+/symfony/var/
+/.env
+/public/bundles
+/vendor/
+/var/
+
+.phpunit
+/phpunit.xml
+/node_modules/
+/public/build/
+
+/.project

@@ -1,0 +1,45 @@
+version: '3.7'
+services:
+  php-apache:
+    build:
+      context: .
+      dockerfile: docker-config/php-apache/Dockerfile
+    depends_on:
+      - mysql
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
+      - ./docker-config/php-apache/php-extra.ini:/usr/local/etc/php/conf.d/php-extra.ini
+  codecept:
+    build:
+      context: .
+      dockerfile: docker-config/php/Dockerfile
+    depends_on:
+      - mysql
+    volumes:
+      - .:/project
+  mysql:
+    build:
+      context: .
+      dockerfile: docker-config/mysql/Dockerfile
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: skeleton_db_local
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: db_user
+    volumes:
+      - ./docker-config/mysql/dumps/:/docker-entrypoint-initdb.d
+  #mysql-test:
+  #  build:
+  #    context: .
+  #    dockerfile: docker-config/mysql/Dockerfile
+  #  ports:
+  #    - "8001:3306"
+  #  environment:
+  #    MYSQL_ROOT_PASSWORD: 123456
+  #    MYSQL_DATABASE: t_ppt
+  #  volumes:
+  #    - ./docker-config/mysql/dumps/:/docker-entrypoint-initdb.d
