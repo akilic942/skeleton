@@ -28,8 +28,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: skeleton_db_local
-      MYSQL_USER: db_user
-      MYSQL_PASSWORD: db_user
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
     volumes:
       - ./docker-config/mysql/dumps/:/docker-entrypoint-initdb.d
   #mysql-test:
