@@ -1,5 +1,4 @@
 /symfony/var/
-/.env
 /public/bundles
 /vendor/
 /var/
