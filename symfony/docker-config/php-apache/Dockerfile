@@ -37,8 +37,8 @@ RUN pecl install xdebug
 RUN rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/
 RUN docker-php-ext-install ldap
+RUN docker-php-ext-configure zip
 RUN docker-php-ext-install zip
-RUN docker-php-ext-configure zip --with-libzip
 RUN docker-php-ext-install json
 RUN docker-php-ext-install fileinfo
 RUN docker-php-ext-install intl
