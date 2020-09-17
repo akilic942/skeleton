@@ -1,0 +1,8 @@
+Linux (Manjaro)
+
+>docker-machine start default
+>sudo systemctl start docker
+>docker-compose up (oder docker-compose up -d php-apache)
+>docker-compose exec php-apache composer install
+>docker-compose exec php-apache yarn
+>docker-compose exec php-apache yarn run dev
