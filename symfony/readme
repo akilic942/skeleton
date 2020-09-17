@@ -6,3 +6,5 @@ Linux (Manjaro)
 >docker-compose exec php-apache composer install
 >docker-compose exec php-apache yarn
 >docker-compose exec php-apache yarn run dev
+
+>docker-compose exec php-apache symfony console (+make:entity, make:migration, doctrine:migrations:migrate...)
