@@ -19,3 +19,9 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+/2020-11-13-19-06-53.032-VBoxSVC-3699.log
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
