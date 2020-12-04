@@ -50,6 +50,9 @@
     "codeception/stub": {
         "version": "3.7.0"
     },
+    "composer/package-versions-deprecated": {
+        "version": "1.11.99.1"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -311,6 +314,9 @@
     },
     "symfony/dependency-injection": {
         "version": "v5.0.1"
+    },
+    "symfony/deprecation-contracts": {
+        "version": "v2.2.0"
     },
     "symfony/doctrine-bridge": {
         "version": "v5.0.1"
